@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>11th–12th Details</title>
+<link rel="stylesheet" href="after10th.css">
+</head>
+
+<body>
+
+<div class="main-container">
+
+<div class="header">
+<h1 id="title">Choose Your Stream</h1>
+</div>
+
+
+<!-- SCIENCE -->
+<div class="card">
+
+<h2 id="science">🔬 Science Stream</h2>
+
+<button onclick="openScienceCareer()">
+Career After Science
+</button>
+
+<button onclick="openScienceStudy()">
+How To Study Science
+</button>
+
+</div>
+
+
+<!-- COMMERCE -->
+<div class="card">
+
+<h2 id="commerce">💼 Commerce Stream</h2>
+
+<button onclick="openCommerceCareer()">
+Career After Commerce
+</button>
+
+<button onclick="openCommerceStudy()">
+How To Study Commerce
+</button>
+
+</div>
+
+
+<!-- ARTS -->
+<div class="card">
+
+<h2 id="arts">🎨 Arts / Humanities</h2>
+
+<button onclick="openArtsCareer()">
+Career After Arts
+</button>
+
+<button onclick="openArtsStudy()">
+How To Study Arts
+</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+window.onload=function(){
+
+let lang=localStorage.getItem("language");
+
+if(lang=="hi"){
+
+document.getElementById("title").innerHTML="अपनी स्ट्रीम चुनें";
+
+document.getElementById("science").innerHTML="🔬 साइंस स्ट्रीम";
+
+document.getElementById("commerce").innerHTML="💼 कॉमर्स स्ट्रीम";
+
+document.getElementById("arts").innerHTML="🎨 आर्ट्स / मानविकी";
+
+}
+
+}
+
+
+
+function openScienceCareer(){
+
+window.location.href="science.html";
+
+}
+
+
+function openScienceStudy(){
+
+window.location.href="science-study.html";
+
+}
+
+
+function openCommerceCareer(){
+
+window.location.href="commerce-after12.html";
+
+}
+
+
+
+function openCommerceStudy(){
+
+window.location.href="commerce-study.html";
+
+}
+
+
+function openArtsCareer(){
+
+window.location.href="arts-after12.html";
+
+}
+
+
+function openArtsStudy(){
+
+window.location.href="arts-study.html";
+
+}
+
+</script>
+
+</body>
+</html>

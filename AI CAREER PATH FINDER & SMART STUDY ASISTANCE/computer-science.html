@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Computer Science Field</title>
+<link rel="stylesheet" href="computer-science.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+
+<div class="top-bar">
+
+<button class="back-btn" onclick="window.history.back()">
+← Back 
+</button>
+
+<div class="lang-box">
+Language / भाषा:
+<button onclick="setEnglish()">English</button>
+<button onclick="setHindi()">हिंदी</button>
+</div>
+
+</div>
+
+
+
+
+<div class="hero">
+
+<div class="hero-left">
+
+<h1 id="title">Computer Science Engineering (CSE)</h1>
+
+<h2 id="subtitleHindi">कंप्यूटर साइंस इंजीनियरिंग (सीएसई)</h2>
+
+<h3 id="subtitle">Create • Innovate • Build</h3>
+
+<h4 id="subtitle2">निर्माण • नवाचार • विकास</h4>
+
+<p id="desc">
+Pursue a rewarding career of technology and innovation 
+by joining the world of engineering.
+</p>
+
+<p id="descHindi">
+इंजीनियरिंग और नवाचार की दुनिया में शामिल होकर शानदार करियर बनाएं।
+</p>
+
+</div>
+
+<div class="hero-right">
+<img src="computer-science.jpg">
+</div>
+
+</div>
+
+
+
+<h2 class="main-heading" id="mainHeading">
+Everything You Need To Know About Engineering Career
+</h2>
+
+
+
+<div class="cards">
+
+<div class="card" onclick="openPage('what-engineering.html')">
+<i class="fas fa-cogs"></i>
+<h3 id="c1">1. What is Computer Science Engineering ?</h3>
+<p id="c1d">Engineering is the application of science to build machines and technology.</p>
+</div>
+
+<div class="card" onclick="openPage('eligibility.html')">
+<i class="fas fa-user-graduate"></i>
+<h3 id="c2">2. Eligibility</h3>
+<p id="c2d">Choose PCM in 11th & 12th with minimum 50–60% marks.</p>
+</div>
+
+<div class="card" onclick="openPage('entrance-exams.html')">
+<i class="fas fa-file-alt"></i>
+<h3 id="c3">3. Entrance Exams</h3>
+<p id="c3d">JEE Main / JEE Advanced / State Level Exams.</p>
+</div>
+
+<div class="card" onclick="openPage('books.html')">
+<i class="fas fa-book"></i>
+<h3 id="c4">4. Best Books</h3>
+<p id="c4d">NCERT, HC Verma, RD Sharma, DC Pandey.</p>
+</div>
+
+<div class="card" onclick="openPage('study-plan.html')">
+<i class="fas fa-lightbulb"></i>
+<h3 id="c5">5. Study Plan</h3>
+<p id="c5d">Practice daily, revise concepts and solve PYQs.</p>
+</div>
+
+<div class="card" onclick="openPage('top-colleges.html')">
+<i class="fas fa-school"></i>
+<h3 id="c6">6. Top Colleges</h3>
+<p id="c6d">IITs, NITs, BITS, SVIET.</p>
+</div>
+
+<div class="card" onclick="openPage('salary.html')">
+<i class="fas fa-rupee-sign"></i>
+<h3 id="c7">7. Salary & Scope</h3>
+<p id="c7d">Average salary ₹4–20 LPA depending on skills.</p>
+</div>
+
+<div class="card" onclick="openPage('career-options.html')">
+<i class="fas fa-briefcase"></i>
+<h3 id="c8">8. Career Options</h3>
+<p id="c8d">Software Engineer, Data Scientist,
+Web Developer, Cyber Security and more.</p>
+</div>
+
+</div>
+
+
+
+<div class="quick-info">
+
+<h2 id="quickTitle">💡 Quick Info / संक्षिप्त जानकारी</h2>
+
+<div class="quick-grid">
+<div id="q1">Course <br> B.Tech (CSE)</div>
+<div id="q2">Duration <br> 4 Years</div>
+<div id="q3">Entrance <br> JEE Main / Advanced</div>
+<div id="q4">Minimum Age <br> 17+</div>
+</div>
+
+</div>
+
+
+
+<div class="help-section">
+
+<div class="left-help">
+
+<h2 id="helpTitle">Need More Help?</h2>
+
+<p id="helpDesc">
+Have questions about Computer Science Engineering courses,
+JEE preparation or colleges?
+</p>
+
+<button>Ask AI Assistant</button>
+
+</div>
+
+
+<div class="right-help">
+
+<h3>AI Career Assistant</h3>
+
+<div class="chat-box">
+
+<p>User: Best computer sciencen engineering colleges?</p>
+
+<p>Bot: IIT Bombay, IIT Delhi, NIT Trichy, SVIET Chandigarh.</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function openPage(page){
+window.location.href=page;
+}
+
+function setHindi(){
+
+document.getElementById("title").innerHTML="इंजीनियरिंग क्षेत्र";
+document.getElementById("subtitleHindi").style.display="none";
+
+document.getElementById("subtitle").innerHTML="निर्माण • नवाचार • विकास";
+document.getElementById("subtitle2").style.display="none";
+
+document.getElementById("desc").innerHTML=
+"इंजीनियरिंग और नवाचार की दुनिया में शामिल होकर शानदार करियर बनाएं।";
+
+document.getElementById("descHindi").style.display="none";
+
+document.getElementById("mainHeading").innerHTML=
+"इंजीनियरिंग करियर के बारे में सब कुछ जानें";
+
+}
+
+function setEnglish(){
+location.reload();
+}
+
+</script>
+
+</body>
+</html> 

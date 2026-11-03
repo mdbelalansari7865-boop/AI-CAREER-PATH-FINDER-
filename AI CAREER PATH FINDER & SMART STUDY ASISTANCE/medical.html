@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Medical Field</title>
+
+<link rel="stylesheet" href="ca.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+<button class="back-btn" onclick="history.back()">
+
+← Back
+
+</button>
+
+<div class="lang-box">
+
+Language / भाषा :
+
+<button onclick="setEnglish()">English</button>
+
+<button onclick="setHindi()">हिंदी</button>
+
+</div>
+
+</div>
+
+<!-- HERO SECTION -->
+
+<div class="hero">
+
+<div class="hero-left">
+
+<h1 id="title">
+
+Medical Field
+
+</h1>
+
+<h2 id="titleHindi">
+
+चिकित्सा क्षेत्र
+
+</h2>
+
+<h3 id="subtitle">
+
+Heal • Care • Save Lives
+
+</h3>
+
+<h4 id="subtitleHindi">
+
+उपचार • देखभाल • जीवन बचाएं
+
+</h4>
+
+<p id="desc">
+
+The Medical Field is one of the most respected career options.
+It focuses on diagnosing diseases, treating patients,
+improving healthcare, and saving lives.
+
+</p>
+
+<p id="descHindi">
+
+मेडिकल क्षेत्र सबसे सम्मानित करियर विकल्पों में से एक है।
+इसका उद्देश्य लोगों का इलाज करना,
+स्वास्थ्य सेवाओं में सुधार करना और जीवन बचाना है।
+
+</p>
+
+</div>
+
+<div class="hero-right">
+
+<img src="medical.jpg" alt="Medical Field">
+
+</div>
+
+</div>
+
+<h2 class="main-heading">
+
+Everything You Need To Know About Medical Career
+
+</h2>
+
+<div class="cards">
+
+<!-- CARD 1 -->
+
+<div class="card" onclick="openPage('what-is-medical.html')">
+
+<i class="fas fa-user-doctor"></i>
+
+<h3>1. What is Medical Field?</h3>
+
+<p>
+
+Introduction to the Medical Profession,
+Healthcare and Doctors.
+
+</p>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card" onclick="openPage('medical-eligibility.html')">
+
+<i class="fas fa-user-graduate"></i>
+
+<h3>2. Eligibility</h3>
+
+<p>
+
+PCB in 11th & 12th,
+Minimum Marks,
+Age Limit.
+
+</p>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card" onclick="openPage('neet.html')">
+
+<i class="fas fa-file-medical"></i>
+
+<h3>3. Entrance Exams</h3>
+
+<p>
+
+NEET UG,
+NEET PG,
+AIIMS,
+JIPMER.
+
+</p>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="card" onclick="openPage('medical-courses.html')">
+
+<i class="fas fa-stethoscope"></i>
+
+<h3>4. Medical Courses</h3>
+
+<p>
+
+MBBS,
+BDS,
+BAMS,
+BHMS,
+BUMS,
+BPT,
+Nursing.
+
+</p>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="card" onclick="openPage('medical-books.html')">
+
+<i class="fas fa-book"></i>
+
+<h3>5. Best Books</h3>
+
+<p>
+
+NCERT,
+MTG,
+Trueman Biology,
+Physics & Chemistry Books.
+
+</p>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="card" onclick="openPage('medical-study-plan.html')">
+
+<i class="fas fa-lightbulb"></i>
+
+<h3>6. Study Plan</h3>
+
+<p>
+
+Daily Routine,
+Revision,
+Mock Tests,
+Previous Year Questions.
+
+</p>
+
+</div>
+<!-- CARD 7 -->
+
+<div class="card" onclick="openPage('medical-colleges.html')">
+
+<i class="fas fa-hospital"></i>
+
+<h3>7. Top Medical Colleges</h3>
+
+<p>
+
+AIIMS,
+CMC Vellore,
+JIPMER,
+AFMC,
+KGMU and more.
+
+</p>
+
+</div>
+
+
+
+<!-- CARD 8 -->
+
+<div class="card" onclick="openPage('medical-salary.html')">
+
+<i class="fas fa-indian-rupee-sign"></i>
+
+<h3>8. Salary & Scope</h3>
+
+<p>
+
+Doctor,
+Dentist,
+Nurse,
+Pharmacist,
+Physiotherapist Salary.
+
+</p>
+
+</div>
+
+
+
+<!-- CARD 9 -->
+
+<div class="card" onclick="openPage('medical-career.html')">
+
+<i class="fas fa-briefcase-medical"></i>
+
+<h3>9. Career Options</h3>
+
+<p>
+
+Doctor,
+Surgeon,
+Dentist,
+Nurse,
+Radiologist,
+Pathologist and more.
+
+</p>
+
+</div>
+
+
+
+<!-- CARD 10 -->
+
+<div class="card" onclick="openPage('medical-skills.html')">
+
+<i class="fas fa-brain"></i>
+
+<h3>10. Skills Required</h3>
+
+<p>
+
+Communication,
+Patience,
+Observation,
+Decision Making,
+Problem Solving.
+
+</p>
+
+</div>
+
+
+
+<!-- CARD 11 -->
+
+<div class="card" onclick="openPage('medical-future.html')">
+
+<i class="fas fa-globe"></i>
+
+<h3>11. Future Scope</h3>
+
+<p>
+
+Hospitals,
+Research,
+Government Jobs,
+Private Practice,
+Abroad Opportunities.
+
+</p>
+
+</div>
+
+
+
+<!-- CARD 12 -->
+
+<div class="card" onclick="openPage('medical-faq.html')">
+
+<i class="fas fa-circle-question"></i>
+
+<h3>12. Frequently Asked Questions</h3>
+
+<p>
+
+Most asked questions about
+Medical Career.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- QUICK INFO -->
+
+<div class="quick-info">
+
+<h2>
+
+💡 Quick Information
+
+</h2>
+
+<div class="quick-grid">
+
+<div>
+
+Course
+
+<br>
+
+MBBS / Medical
+
+</div>
+
+<div>
+
+Duration
+
+<br>
+
+5.5 Years
+
+</div>
+
+<div>
+
+Entrance
+
+<br>
+
+NEET UG
+
+</div>
+
+<div>
+
+Salary
+
+<br>
+
+₹5L – ₹50L+ / Year
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- AI SECTION -->
+
+<div class="help-section">
+
+<div class="left-help">
+
+<h2>
+
+Need More Help?
+
+</h2>
+
+<p>
+
+Ask anything about
+NEET,
+Medical Colleges,
+Courses,
+Salary,
+Career Guidance.
+
+</p>
+
+<button onclick="window.location.href='chatbot.html'">
+
+Ask AI Assistant
+
+</button>
+
+</div>
+
+
+
+<div class="right-help">
+
+<h3>
+
+AI Career Assistant
+
+</h3>
+
+<div class="chat-box">
+
+<p>
+
+User :
+Best Medical College in India?
+
+</p>
+
+<p>
+
+Bot :
+AIIMS Delhi,
+CMC Vellore,
+JIPMER,
+AFMC Pune,
+KGMU Lucknow.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+<button class="back-btn" onclick="history.back()">
+
+← Back
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function openPage(page){
+
+window.location.href=page;
+
+}
+
+
+
+function setHindi(){
+
+document.getElementById("title").innerHTML="चिकित्सा क्षेत्र";
+
+document.getElementById("titleHindi").style.display="none";
+
+document.getElementById("subtitle").innerHTML="उपचार • देखभाल • जीवन बचाएं";
+
+document.getElementById("subtitleHindi").style.display="none";
+
+document.getElementById("desc").innerHTML=
+"मेडिकल क्षेत्र सबसे सम्मानित करियर विकल्पों में से एक है। इसका उद्देश्य लोगों का इलाज करना, स्वास्थ्य सेवाओं में सुधार करना और जीवन बचाना है।";
+
+document.getElementById("descHindi").style.display="none";
+
+}
+
+
+
+function setEnglish(){
+
+location.reload();
+
+}
+
+</script>
+
+</body>
+
+</html>

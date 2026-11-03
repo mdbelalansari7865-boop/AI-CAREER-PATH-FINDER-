@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Engineering Branches</title>
+
+<link rel="stylesheet" href="engineering.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top-bar">
+
+<button onclick="history.back()" class="back-btn">
+← Back
+</button>
+
+</div>
+
+
+<div class="header">
+
+<h1>Engineering Branches</h1>
+
+<p id="message">
+Choose an Engineering branch to explore complete details,
+top colleges, fees, salary, roadmap and AI Assistant.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card" onclick="openBranch('computer-science.html')">
+
+<h2>💻 Computer Science Engineering</h2>
+
+<p>
+Programming, Software Development, AI,
+Web Development, App Development.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('artificial-intelligence.html')">
+
+<h2>🤖 Artificial Intelligence</h2>
+
+<p>
+Machine Learning,
+Deep Learning,
+Generative AI,
+Robotics.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('data-science.html')">
+
+<h2>📊 Data Science</h2>
+
+<p>
+Data Analytics,
+Big Data,
+Python,
+Business Intelligence.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('cyber-security.html')">
+
+<h2>🔐 Cyber Security</h2>
+
+<p>
+Ethical Hacking,
+Network Security,
+Digital Forensics.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('information-technology.html')">
+
+<h2>🌐 Information Technology</h2>
+
+<p>
+Networking,
+Cloud Computing,
+Software Systems.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('mechanical.html')">
+
+<h2>⚙ Mechanical Engineering</h2>
+
+<p>
+Machines,
+Manufacturing,
+Automobile,
+Thermal Engineering.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('civil.html')">
+
+<h2>🏗 Civil Engineering</h2>
+
+<p>
+Buildings,
+Roads,
+Bridges,
+Construction.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('electrical.html')">
+
+<h2>⚡ Electrical Engineering</h2>
+
+<p>
+Power Systems,
+Electrical Machines,
+Energy.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('electronics.html')">
+
+<h2>📡 Electronics Engineering</h2>
+
+<p>
+Embedded Systems,
+Communication,
+IoT.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('chemical.html')">
+
+<h2>🧪 Chemical Engineering</h2>
+
+<p>
+Chemical Plants,
+Petroleum,
+Industrial Processes.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('automobile.html')">
+
+<h2>🚗 Automobile Engineering</h2>
+
+<p>
+Cars,
+Electric Vehicles,
+Vehicle Design.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('aerospace.html')">
+
+<h2>✈ Aerospace Engineering</h2>
+
+<p>
+Aircraft,
+Spacecraft,
+Satellite Technology.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('biomedical.html')">
+
+<h2>🧬 Biomedical Engineering</h2>
+
+<p>
+Medical Equipment,
+Healthcare Technology.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('agriculture.html')">
+
+<h2>🌾 Agricultural Engineering</h2>
+
+<p>
+Farm Technology,
+Food Processing,
+Irrigation.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('robotics.html')">
+
+<h2>🤖 Robotics Engineering</h2>
+
+<p>
+Automation,
+Industrial Robots,
+AI Robotics.
+</p>
+
+</div>
+
+
+
+<div class="card" onclick="openBranch('architecture.html')">
+
+<h2>🏛 Architecture</h2>
+
+<p>
+Building Design,
+Urban Planning,
+Interior Design.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+let from = localStorage.getItem("class");
+
+if(from=="10th"){
+
+document.getElementById("message").innerHTML =
+"After Class 10, choose PCM (Physics, Chemistry and Mathematics) in Classes 11 & 12 if you want to pursue most engineering courses.";
+
+}
+
+else if(from=="12th"){
+
+document.getElementById("message").innerHTML =
+"You have completed Class 12. Select an engineering branch to explore eligibility, colleges, fees, placements and future opportunities.";
+
+}
+
+function openBranch(page){
+
+window.location.href = page;
+
+}
+
+</script>
+
+</body>
+
+</html>

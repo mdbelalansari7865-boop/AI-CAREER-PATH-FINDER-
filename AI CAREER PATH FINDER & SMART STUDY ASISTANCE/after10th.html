@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>After 10th Roadmap</title>
+    <link rel="stylesheet" href="after10th.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="header">
+
+<!-- <button class="back-btn" onclick="goBack()">
+← Back
+</button> -->
+
+<h1 id="title">Choose Your Path After 10th</h1>
+
+<select class="lang-btn" onchange="changeLanguage()" id="langSelect">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+</select>
+
+</div>
+
+
+    <div class="card" id="card1" onclick="openDetails()">
+        1. 📘 11th–12th School
+    </div>
+
+    <div class="card" id="card2">
+        2. 🛠 Diploma Courses
+    </div>
+
+    <div class="card" id="card3">
+        3. 🏭 Polytechnic
+    </div>
+
+    <div class="card" id="card4">
+        4. 🔧 ITI Courses
+    </div>
+
+    <div class="card" id="card5">
+        5. 💻 Vocational Courses
+    </div>
+
+    <div class="card" id="card6">
+        6. 🏥 Paramedical Courses
+    </div>
+
+    <div class="card" id="card7">
+        7. 🏨 Hotel Management
+    </div>
+
+    <div class="card" id="card8">
+        8. 🎨 Design / Fashion
+    </div>
+
+    <div class="card" id="card9">
+        9. 🌾 Agriculture Courses
+    </div>
+
+    <div class="card" id="card10">
+        10. 🛡 Defense Preparation
+    </div>
+    <!-- Back Button -->
+
+   <div class="footer">
+
+   <button class="back-btn" onclick="goBack()">
+
+   ← Back
+
+   </button>
+   </div>
+
+</div>
+
+
+
+<script>
+
+    function goBack(){
+
+window.history.back();
+
+}
+
+function changeLanguage(){
+
+let lang=document.getElementById("langSelect").value;
+localStorage.setItem("language", lang);
+
+if(lang=="hi"){
+
+document.getElementById("title").innerHTML="10वीं के बाद अपना रास्ता चुनें";
+
+document.getElementById("card1").innerHTML="1. 📘 11वीं–12वीं स्कूल";
+document.getElementById("card2").innerHTML="2. 🛠 डिप्लोमा कोर्स";
+document.getElementById("card3").innerHTML="3. 🏭 पॉलिटेक्निक";
+document.getElementById("card4").innerHTML="4. 🔧 आईटीआई कोर्स";
+document.getElementById("card5").innerHTML="5. 💻 वोकेशनल कोर्स";
+document.getElementById("card6").innerHTML="6. 🏥 पैरामेडिकल कोर्स";
+document.getElementById("card7").innerHTML="7. 🏨 होटल मैनेजमेंट";
+document.getElementById("card8").innerHTML="8. 🎨 डिजाइन / फैशन";
+document.getElementById("card9").innerHTML="9. 🌾 कृषि कोर्स";
+document.getElementById("card10").innerHTML="10. 🛡 रक्षा तैयारी";
+
+}
+
+
+else{
+
+document.getElementById("title").innerHTML="Choose Your Path After 10th";
+
+document.getElementById("card1").innerHTML="1. 📘 11th–12th School";
+document.getElementById("card2").innerHTML="2. 🛠 Diploma Courses";
+document.getElementById("card3").innerHTML="3. 🏭 Polytechnic";
+document.getElementById("card4").innerHTML="4. 🔧 ITI Courses";
+document.getElementById("card5").innerHTML="5. 💻 Vocational Courses";
+document.getElementById("card6").innerHTML="6. 🏥 Paramedical Courses";
+document.getElementById("card7").innerHTML="7. 🏨 Hotel Management";
+document.getElementById("card8").innerHTML="8. 🎨 Design / Fashion";
+document.getElementById("card9").innerHTML="9. 🌾 Agriculture Courses";
+document.getElementById("card10").innerHTML="10. 🛡 Defense Preparation";
+
+}
+
+}
+
+
+
+function openDetails(){
+
+window.location.href="schooldetails.html";
+
+}
+
+</script>
+
+</body>
+</html>

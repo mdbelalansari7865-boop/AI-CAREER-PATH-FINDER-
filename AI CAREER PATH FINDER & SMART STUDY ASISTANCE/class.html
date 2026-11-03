@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Select Class</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Which class are you in?</h2>
+
+<select id="classSelect" onchange="toggleInput()">
+
+<option value="">Select Class</option>
+
+<option value="6th">6th</option>
+<option value="7th">7th</option>
+<option value="8th">8th</option>
+<option value="9th">9th</option>
+<option value="10th">10th</option>
+<option value="11th">11th</option>
+<option value="12th">12th</option>
+<option value="Graduate">Graduate</option>
+
+<option value="other">Other</option>
+
+</select>
+
+<br><br>
+
+<input
+type="text"
+id="customClass"
+placeholder="Enter your class"
+style="display:none;">
+
+<br><br>
+
+<button onclick="save()">Continue</button>
+
+</div>
+
+
+
+<script>
+
+function toggleInput(){
+
+let selected=document.getElementById("classSelect").value;
+let input=document.getElementById("customClass");
+
+if(selected=="other"){
+
+input.style.display="block";
+
+}
+else{
+
+input.style.display="none";
+
+}
+
+}
+
+
+
+function save(){
+
+let selected=document.getElementById("classSelect").value;
+let custom=document.getElementById("customClass").value;
+
+let finalClass="";
+
+if(selected==""){
+
+alert("Please select your class.");
+return;
+
+}
+
+
+if(selected=="other"){
+
+if(custom==""){
+
+alert("Please enter your class.");
+return;
+
+}
+
+finalClass=custom;
+
+}
+
+else{
+
+finalClass=selected;
+
+}
+
+
+localStorage.setItem("class",finalClass);
+
+
+// Navigation
+
+if(finalClass=="10th"){
+
+window.location.href="after10th.html";
+
+}
+
+else if(finalClass=="12th"){
+
+window.location.href="after12th.html";
+
+}
+
+else{
+
+alert("Class Saved Successfully: "+finalClass);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

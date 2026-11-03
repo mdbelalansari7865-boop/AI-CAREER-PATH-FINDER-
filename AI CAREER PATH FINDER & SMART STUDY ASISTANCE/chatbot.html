@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Career Assistant</title>
+
+<style>
+body{
+font-family:Arial;
+background:#eef2f7;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.chat-container{
+width:450px;
+height:650px;
+background:white;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.15);
+display:flex;
+flex-direction:column;
+overflow:hidden;
+}
+
+.chat-header{
+background:#4facfe;
+color:white;
+padding:20px;
+font-size:24px;
+font-weight:bold;
+text-align:center;
+}
+
+.chat-box{
+flex:1;
+padding:15px;
+overflow-y:auto;
+background:#f8f9fa;
+}
+
+.message{
+margin:10px 0;
+padding:12px 15px;
+border-radius:15px;
+max-width:75%;
+word-wrap:break-word;
+}
+
+.user{
+background:#4facfe;
+color:white;
+margin-left:auto;
+}
+
+.bot{
+background:#e4e6eb;
+color:black;
+margin-right:auto;
+}
+
+.typing{
+font-style:italic;
+color:gray;
+margin:10px;
+}
+
+.input-area{
+display:flex;
+padding:15px;
+border-top:1px solid #ddd;
+}
+
+input{
+flex:1;
+padding:12px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+button{
+margin-left:10px;
+padding:12px 20px;
+background:#4facfe;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="chat-container">
+
+<div class="chat-header">
+AI Career Assistant
+</div>
+
+<div class="chat-box" id="chatBox"></div>
+
+<div class="input-area">
+<input type="text" id="userInput" placeholder="Ask your question...">
+<button onclick="sendMessage()">Send</button>
+</div>
+
+</div>
+
+
+<script>
+
+function sendMessage(){
+
+let input=document.getElementById("userInput").value.toLowerCase();
+
+let chatBox=document.getElementById("chatBox");
+
+if(input=="") return;
+
+chatBox.innerHTML += `<div class="message user">${input}</div>`;
+
+document.getElementById("userInput").value="";
+
+
+chatBox.innerHTML += `<div class="typing" id="typing">AI is typing...</div>`;
+
+chatBox.scrollTop=chatBox.scrollHeight;
+
+
+
+setTimeout(()=>{
+
+document.getElementById("typing").remove();
+
+let answer="";
+
+
+if(input.includes("doctor"))
+answer="To become a doctor choose PCB in 11th, crack NEET, then complete MBBS.";
+
+else if(input.includes("prepare neet"))
+answer="Prepare for NEET by studying NCERT Biology, solving MCQs, and revising Physics/Chemistry.";
+
+else if(input.includes("mbbs"))
+answer="MBBS is a 5.5-year medical degree including internship.";
+
+else if(input.includes("nurse"))
+answer="To become a nurse, pursue B.Sc Nursing or GNM after 12th PCB.";
+
+else if(input.includes("dentist"))
+answer="To become a dentist, crack NEET and pursue BDS.";
+
+else if(input.includes("pharmacist"))
+answer="To become pharmacist, do D.Pharm or B.Pharm.";
+
+else if(input.includes("salary"))
+answer="Doctors can earn ₹50k–₹5L+ per month depending on specialization.";
+
+else if(input.includes("college"))
+answer="Top medical colleges: AIIMS, JIPMER, CMC, AFMC.";
+
+else if(input.includes("study"))
+answer="Study 6–8 hrs daily with regular revision and mock tests.";
+
+else if(input.includes("routine"))
+answer="Morning revision + afternoon practice + evening mock tests is ideal.";
+
+else if(input.includes("biology"))
+answer="Focus on NCERT Biology line-by-line for NEET.";
+
+else if(input.includes("physics"))
+answer="Practice numericals daily for Physics.";
+
+else if(input.includes("chemistry"))
+answer="Revise formulas and reactions regularly.";
+
+else if(input.includes("mock"))
+answer="Give weekly mock tests to improve speed and accuracy.";
+
+else if(input.includes("fail in neet"))
+answer="If NEET not cleared, retry next year or explore BDS, BAMS, Nursing, Pharmacy.";
+
+else if(input.includes("drop"))
+answer="Many students take 1-year drop for NEET preparation.";
+
+else if(input.includes("age"))
+answer="Minimum age for NEET is 17 years.";
+
+else if(input.includes("attempt"))
+answer="Currently no fixed attempt limit in NEET.";
+
+else if(input.includes("private college"))
+answer="Private colleges also offer MBBS but fees are higher.";
+
+else if(input.includes("government"))
+answer="Government colleges have low fees but high competition.";
+
+else if(input.includes("hostel"))
+answer="Most colleges provide hostel facilities.";
+
+else if(input.includes("internship"))
+answer="Medical students do internship after MBBS.";
+
+else if(input.includes("specialization"))
+answer="After MBBS you can do MD/MS for specialization.";
+
+else if(input.includes("surgeon"))
+answer="To become surgeon complete MBBS then MS Surgery.";
+
+else if(input.includes("heart"))
+answer="Cardiologist requires MBBS + MD + DM Cardiology.";
+
+else if(input.includes("brain"))
+answer="Neurologist requires advanced specialization after MBBS.";
+
+else if(input.includes("book"))
+answer="Best books: NCERT, HC Verma, MTG, Trueman Biology.";
+
+else
+answer="Sorry, I am still learning. Please ask medical/career related questions.";
+
+
+
+chatBox.innerHTML += `<div class="message bot">${answer}</div>`;
+
+chatBox.scrollTop=chatBox.scrollHeight;
+
+},1500);
+
+}
+
+
+
+document.getElementById("userInput").addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+sendMessage();
+}
+
+});
+
+</script>
+
+</body>
+</html>

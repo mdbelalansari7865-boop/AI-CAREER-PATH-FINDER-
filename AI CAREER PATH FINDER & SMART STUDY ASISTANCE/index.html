@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Career Path Finder</title>
+
+<link rel="stylesheet" href="index.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="top-section">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/8637/8637099.png" class="logo">
+
+    <h1>AI Career Path Finder</h1>
+
+    <p class="subtitle">Smart Study Assistant</p>
+
+    <p class="tagline">
+        Plan your future, learn smart, and achieve your dream career.
+    </p>
+
+</div>
+
+
+<div class="container">
+
+<h2>Sign Up</h2>
+
+<p>Create New Account</p>
+
+
+<div class="input-box">
+<i class="fa fa-user"></i>
+<input type="text" id="name" placeholder="Enter Name">
+</div>
+
+
+<div class="input-box">
+<i class="fa fa-envelope"></i>
+<input type="email" id="email" placeholder="Enter Email">
+</div>
+
+
+<div class="input-box">
+<i class="fa fa-lock"></i>
+<input type="password" id="password" placeholder="Create Password">
+<i class="fa fa-eye toggle" onclick="togglePassword('password',this)"></i>
+
+</div>
+
+
+<div class="input-box">
+<i class="fa fa-lock"></i>
+<input type="password" id="confirmPassword" placeholder="Confirm Password">
+<i class="fa fa-eye toggle" onclick="togglePassword('confirmPassword',this)"></i>
+</div>
+
+
+<div class="input-box">
+<i class="fa fa-key"></i>
+<input type="text" id="otp" placeholder="Enter OTP">
+</div>
+
+
+<button onclick="sendOTP()">Send OTP</button>
+
+<button onclick="signup()">Sign Up</button>
+
+
+<div class="bottom-option">
+    <p>Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+</div>
+
+</div>
+
+
+
+<script>
+
+emailjs.init({
+    publicKey: "Hl5dcu4ld5J7Fb0av"
+});
+
+let generatedOTP="";
+
+
+function sendOTP(){
+
+let email=document.getElementById("email").value;
+
+generatedOTP=Math.floor(1000+Math.random()*9000);
+
+let params={
+to_email:email,
+otp:generatedOTP
+};
+
+emailjs.send(
+    "service_v28ijbi",
+    "template_ruz34ri",
+    params
+)
+.then(function(response){
+    console.log("SUCCESS", response);
+    alert("OTP Sent Successfully");
+})
+.catch(function(error){
+    console.error("Full Error:", error);
+    alert(error.text || error.message || "Unknown Error");
+});
+}
+
+function togglePassword(id, icon){
+
+let pass=document.getElementById(id);
+
+if(pass.type==="password"){
+
+pass.type="text";
+
+icon.classList.remove("fa-eye");
+icon.classList.add("fa-eye-slash");
+
+}else{
+
+pass.type="password";
+
+icon.classList.remove("fa-eye-slash");
+icon.classList.add("fa-eye");
+
+}
+
+}
+
+function signup(){
+
+let name=document.getElementById("name").value.trim();
+
+let email=document.getElementById("email").value.trim();
+
+let password=document.getElementById("password").value;
+
+let confirmPassword=document.getElementById("confirmPassword").value;
+
+let otp=document.getElementById("otp").value.trim();
+
+if(password!==confirmPassword){
+
+alert("Passwords do not match");
+
+return;
+
+}
+
+if(otp!=generatedOTP){
+
+alert("Wrong OTP ❌");
+
+return;
+
+}
+
+localStorage.setItem("name",name);
+
+localStorage.setItem("email",email);
+
+localStorage.setItem("password",password);
+
+alert("Signup Successful ✅");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html>
